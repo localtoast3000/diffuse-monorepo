@@ -1,2 +1,2 @@
-<h1>custom-creations</h1>
-<p>Monorepo for Custom Creations apps</p>
+<h1>Stable Diffusion Tools</h1>
+<p>Monorepo for Stable Diffusion Driven Web apps</p>

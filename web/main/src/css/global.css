@@ -1,0 +1,9 @@
+@import '../fonts/circular-std/fontface.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-main-0 font-main font-[350];
+}

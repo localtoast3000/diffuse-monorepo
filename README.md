@@ -1,2 +1,2 @@
-<h1>Stable Diffusion Tools</h1>
-<p>Monorepo for Stable Diffusion Driven Web apps</p>
+<h1>Diffuse Monorepo</h1>
+<p>Monorepo for Diffuse app</p>

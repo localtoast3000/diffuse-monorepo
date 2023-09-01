@@ -1,18 +1,14 @@
 {
-  "name": "api-main",
+  "name": "api.main",
   "version": "1.0.0",
   "private": true,
   "main": "_init_.js",
-  "description": "Main express.js api for Custom Creations applicaton built with TypeScript",
-  "author": {
-    "name": "Craig Chick",
-    "url": "https://github.com/localtoast3000"
-  },
+  "description": "Main express.js api for Diffuse applicatons built with TypeScript",
+  "author": "Craig Chick",
   "scripts": {
     "build": "npx tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "start": "yarn build && node ./dist/_init_.js",
-    "dev": "nodemon",
-    "exports-gen": "ts-node scripts/exports-generator src/controllers src/middleware src/routes"
+    "dev": "nodemon"
   },
   "dependencies": {
     "@prisma/client": "^5.1.0",

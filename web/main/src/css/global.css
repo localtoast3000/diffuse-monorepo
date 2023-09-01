@@ -1,9 +1,9 @@
-@import '../fonts/circular-std/fontface.css';
+@import '../fonts/work-sans/fontface.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply text-main-0 font-main font-[350];
+  @apply font-main font-[400] text-con-0;
 }

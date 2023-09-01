@@ -1,24 +1,23 @@
 {
-  "name": "stable-diffusion-tools",
+  "name": "diffuse-monorepo",
   "version": "1.0.0",
-  "description": "Monorepo for Stable Diffusion Driven Web apps",
-  "main": "index.js",
+  "description": "Monorepo for Diffuse apps",
   "repository": {
-    "url": "https://github.com/localtoast3000/stable-diffusion-tools.git"
+    "url": "https://github.com/localtoast3000/diffuse-monorepo.git"
   },
   "author": "Craig Chick",
   "private": true,
-  "workspaces": [
-    "apis/*",
-    "web/*",
-    "shared/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "apis/*",
+      "web/*",
+      "shared/*"
+    ]
+  },
   "scripts": {
-    "ui:components:gen-exports": "ts-node scripts/exports-generator ./node_modules/shared.ui/components/page ./node_modules/shared.ui/components/graphics ./node_modules/shared.ui/components/buttons",
-    "ui:hooks:gen-exports": "ts-node scripts/exports-generator ./node_modules/shared.ui/hooks/bowser ./node_modules/shared.ui/hooks/events",
-    "gen-exports": "yarn ui:components:gen-exports && yarn ui:hooks:gen-exports",
-    "api:main": "yarn workspace api-main",
-    "web:main": "yarn workspace web-main"
+    "web:main": "yarn workspace web.diffuse",
+    "api:main": "yarn workspace api.main",
+    "api:gen-exports": "ts-node scripts/exports-generator ./node_modules/api.main/src/controllers ./node_modules/api.main/src/middleware ./node_modules/api.main/src/routes"
   },
   "devDependencies": {
     "ts-node": "^10.9.1"

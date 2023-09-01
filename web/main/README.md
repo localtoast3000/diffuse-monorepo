@@ -1,5 +1,2 @@
-<h1>Svelte Podedex</h1>
-<h2>Pokemon viewer</h2>
-
-<p>Web application built with Svelte</p>
-<p>Using the PokéAPI</p>
+<h1>Diffuse</h1>
+<p>Website providing tools to generator and edit images based on the Stable Diffusion API</p>

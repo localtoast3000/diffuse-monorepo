@@ -1,21 +1,15 @@
 <script>
-  import Form from "$components/form/form.svelte";
-  import Input from "$components/form/input.svelte";
+  import BackgroundImage from "$components/page/background-image.svelte";
 </script>
 
-<main class="w-full min-h-[300px] flex items-center justify-center flex-col">
-  <header>
-    <span class="flex flex-col text-[2rem] font-[700]">
-      <span class="flex gap-[8px]">
-        <p>What</p>
-        <h1>Pokemon</h1>
-      </span>
-      <p>are you looking for?</p>
-    </span>
+<main class="w-full">
+  <header class="w-full flex flex-col items-center mt-10">
+    <BackgroundImage />
+    <h1 class="mx-auto flex flex-col text-center text-[2.2rem] font-header font-bold">
+      <span>Words to Wonders</span>
+      <span>The New Era of AI-Driven Visuals</span>
+    </h1>
+    <h2 class="text-neutral">Cutting edge AI technology for image creation and editing</h2>
   </header>
-  <section>
-    <Form>
-      <Input />
-    </Form>
-  </section>
 </main>
+

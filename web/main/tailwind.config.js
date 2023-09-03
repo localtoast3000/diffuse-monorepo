@@ -3,37 +3,26 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...require('daisyui/src/theming/themes')['[data-theme=dark]'],
+          'base-100': '#111827',
+          'base-content': '#ffffff',
+          primary: '#4C35DE',
+          secondary: '#DF3473',
+          accent: '#008B61',
+          neutral: '#8D92A1',
+          'neutral-content': '#ffffff',
+        },
+      },
+    ],
+  },
   theme: {
-    colors: {
-      'fir-0': '#111827',
-      'fir-1': '#1F2937',
-      'fir-2': '#363F4B',
-      'fir-3': '#4C545F',
-      'sec-0': '#4C35DE',
-      'sec-1': '#7764F2',
-      'sec-2': '#9182F8',
-      'sec-3': '#A69FFD',
-      'err-0': '#DF3434',
-      'err-1': '#F34B47',
-      'err-2': '#FF645C',
-      'err-3': '#FF7D71',
-      'thi-0': '#DF3473',
-      'thi-1': '#ED4583',
-      'thi-2': '#FF5B97',
-      'thi-3': '#FF708B',
-      'fou-0': '#008B61',
-      'fou-1': '#21A178',
-      'fou-2': '#44B88F',
-      'fou-3': '#67CFA6',
-      'mac-0': '#E44B31',
-      'mac-1': '#F4C455',
-      'mac-2': '#468148',
-      'con-0': '#FFFFFF',
-      'con-1': '#8D92A1',
-      ...defaultTheme.colors,
-    },
     fontFamily: {
-      main: 'work-sans',
+      header: 'gelasio',
+      main: 'inter',
     },
     extend: {
       spacing: {
@@ -65,5 +54,5 @@ export default {
       widest: '.2em',
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

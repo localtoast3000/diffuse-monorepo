@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-MediumItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-SemiBoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'gelasio';
+  src: url('./Gelasio-BoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 700;
+}

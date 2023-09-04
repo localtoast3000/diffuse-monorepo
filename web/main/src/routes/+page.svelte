@@ -5,7 +5,7 @@
 <BackgroundImage />
 <main class="relative w-full z-10 px-page-xs flex justify-center">
   <header
-    class="w-full flex flex-col items-center mt-[50px] max-w-[500px] md:mt-[200px] md:max-w-[900px]"
+    class="w-full flex flex-col items-center max-w-[500px] md:mt-[100px] md:max-w-[900px]"
   >
     <div class="mb-10 w-full flex flex-col items-center">
       <h1

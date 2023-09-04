@@ -11,8 +11,7 @@
       sizes="(max-width: 479px) 100vw, 732px"
       alt="background bolt"
       class="bolt-img-bg"
-      srcset="/images/bolt/bolt-500.png 500w, /images/bolt/bolt-800.png 800w, images/bolt/bolt-1080.png 1080w, images/bolt/bolt-1468.png 1468w  1468w"
-    />
+      srcset="/images/bolt/bolt-500.png 500w, /images/bolt/bolt-800.png 800w, images/bolt/bolt-1080.png 1080w, images/bolt/bolt-1468.png 1468w  1468w" />
     <div class="elipse-bolt-effect-wrapper xsmall-hidden">
       <div class="elipse-bolt-effect" />
     </div>

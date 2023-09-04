@@ -1,76 +1,94 @@
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-label-has-associated-control -->
-<div class="relative navbar bg-base-100 z-50 px-page-sm">
-  <div class="navbar-start">
-    <a
-      href="/"
-      class="btn btn-ghost normal-case text-xl"
-    >
-      <img
-        src="graphics/logo/logo.svg"
-        alt="Diffuse logo"
-      />
-    </a>
+<div class="drawer z-50">
+  <input
+    id="drawer-toggle-btn"
+    type="checkbox"
+    class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <div class="w-full navbar h-[90px] px-[20px] bg-transparent">
+      <div class="navbar-start">
+        <a
+          href="/"
+          class="btn btn-ghost">
+          <img
+            src="/graphics/logo/logo.svg"
+            alt="Diffuse logo" />
+        </a>
+      </div>
+      <div class="flex-none md:hidden navbar-end">
+        <label
+          for="drawer-toggle-btn"
+          class="btn btn-square btn-ghost">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block w-6 h-6 stroke-current">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+      </div>
+      <div class="hidden md:block navbar-center">
+        <ul class="menu menu-horizontal">
+          <li>
+            <a href="/txttoimg">Text to Image</a>
+          </li>
+          <li>
+            <a href="/imgtoimg">Image to Image</a>
+          </li>
+          <li>
+            <a href="/inpainting">Inpainting</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden md:flex navbar-end">
+        <a
+          href="/account/signup"
+          class="btn btn-secondary normal-case text-[1rem]">Sign Up</a>
+      </div>
+    </div>
   </div>
-  <div class="navbar-center hidden md:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li>
-        <a href="/txttoimg">Text to Image</a>
-      </li>
-      <li>
-        <a href="/imgtoimg">Image to Image</a>
-      </li>
-      <li>
-        <a href="/inpainting">Inpainting</a>
-      </li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a
-      href="/account/signup"
-      class="btn btn-primary hidden md:flex">Sign Up</a
-    >
-    <div class="dropdown dropdown-end">
-      <label
-        tabindex="0"
-        class="btn btn-ghost md:hidden"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          ><path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16"
-          /></svg
-        >
-      </label>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-      >
+  <div class="drawer-side">
+    <label
+      for="drawer-toggle-btn"
+      class="drawer-overlay" />
+    <div
+      class="menu p-4 w-[200px] min-[350px]:w-[250px] min-[400px]:w-[300px] sm:w-80 min-h-full bg-base-200">
+      <a
+        href="/"
+        class="flex justify-start btn btn-ghost mb-[20px]">
+        <img
+          src="/graphics/logo/logo.svg"
+          alt="Diffuse logo" />
+      </a>
+      <ul class="mb-[30px]">
         <li>
-          <a href="/txttoimg">Text to Image</a>
-        </li>
-        <li>
-          <a href="/imgtoimg">Image to Image</a>
-        </li>
-        <li>
-          <a href="/inpainting">Inpainting</a>
+          <a
+            href="/txttoimg"
+            class="flex h-[50px] min-[400px]:pl-[50px]">Text to Image</a>
         </li>
         <li>
           <a
-            href="/account/signup"
-            class="btn flex items-center justify-center"
-            ><span class="h-full w-full flex items-center justify-center">Sign Up</span
-            ></a
-          >
+            class="flex h-[50px] min-[400px]:pl-[50px]"
+            href="/imgtoimg">Image to Image</a>
+        </li>
+        <li>
+          <a
+            class="flex h-[50px] min-[400px]:pl-[50px]"
+            href="/inpainting">Inpainting</a>
         </li>
       </ul>
+      <div class="w-full flex justify-center">
+        <a
+          href="/account/signup"
+          class="btn btn-secondary w-full max-w-[250px] normal-case text-[1rem]"
+          >Sign Up</a>
+      </div>
     </div>
   </div>
 </div>

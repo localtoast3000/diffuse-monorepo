@@ -24,7 +24,7 @@
     }
     </style>
     </div>
-    <img src="/images/lightning.png" loading="eager" height="" sizes="(max-width: 479px) 100vw, 732px" alt="" class="bolt-img-bg" srcset="/images/bolt-500.png 500w, /images/bolt-800.png 800w, images/bolt-1080.png 1080w, images/bolt-1468.png 1468w  1468w">
+    <img src="/images/bolt/bolt.png" loading="eager" height="" sizes="(max-width: 479px) 100vw, 732px" alt="" class="bolt-img-bg" srcset="/images/bolt/bolt-500.png 500w, /images/bolt/bolt-800.png 800w, images/bolt/bolt-1080.png 1080w, images/bolt/bolt-1468.png 1468w  1468w">
     <div class="elipse-bolt-effect-wrapper xsmall-hidden">
       <div class="elipse-bolt-effect"></div>
     </div>

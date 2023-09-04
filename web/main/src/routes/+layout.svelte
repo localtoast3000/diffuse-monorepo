@@ -1,11 +1,10 @@
 <script>
-  import "../css/global.css";
-  import Navbar from "$components/page/navbar.svelte";
+  import '../css/global.css';
+  import Navbar from '$components/page/navbar.svelte';
 </script>
 
-
 <Navbar />
-<div class="content-container">
+<div class="content-container w-full">
   <slot />
 </div>
 

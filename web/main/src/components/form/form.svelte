@@ -1,8 +1,7 @@
 <script>
-    export let className = ""
+  export let className = '';
 </script>
 
-
-<form class="{className}">
+<form class={className}>
   <slot />
 </form>

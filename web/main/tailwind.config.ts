@@ -1,4 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
+import daisyui from 'daisyui';
+import daisyuiTheme from 'daisyui/src/theming/themes';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,12 +9,14 @@ export default {
     themes: [
       {
         dark: {
-          ...require('daisyui/src/theming/themes')['[data-theme=dark]'],
+          ...daisyuiTheme['[data-theme=dark]'],
           'base-100': '#111827',
           'base-content': '#ffffff',
-          primary: '#4C35DE',
+          primary: '#c47bfd',
           secondary: '#DF3473',
+          '--third': '#ee6f6f',
           accent: '#008B61',
+          info: '#4C35DE',
           neutral: '#8D92A1',
           'neutral-content': '#ffffff',
         },
@@ -54,5 +58,5 @@ export default {
       widest: '.2em',
     },
   },
-  plugins: [require('daisyui')],
+  plugins: [daisyui],
 };

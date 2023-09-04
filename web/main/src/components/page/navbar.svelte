@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-label-has-associated-control -->
-<div class="relative navbar bg-base-100 z-50">
+<div class="relative navbar bg-base-100 z-50 px-page-sm">
   <div class="navbar-start">
     <a
       href="/"
@@ -28,7 +28,7 @@
   <div class="navbar-end">
     <a
       href="/account/signup"
-      class="btn hidden md:flex">Sign Up</a
+      class="btn btn-primary hidden md:flex">Sign Up</a
     >
     <div class="dropdown dropdown-end">
       <label

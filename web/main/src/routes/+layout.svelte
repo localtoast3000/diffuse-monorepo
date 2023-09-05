@@ -1,12 +1,14 @@
 <script>
   import '../css/global.css';
   import Navbar from '$components/page/navbar.svelte';
+  import Footer from '$components/page/footer.svelte';
 </script>
 
 <Navbar />
-<div class="content-container w-full">
+<div class="content-container w-full overflow-hidden">
   <slot />
 </div>
+<Footer />
 
 <style>
   .content-container {

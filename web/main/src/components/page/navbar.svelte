@@ -1,5 +1,17 @@
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-label-has-associated-control -->
+
+<script>
+  import { onMount } from 'svelte';
+
+  let current_endpoint = '';
+
+  onMount(() => {
+    const path = window.location.pathname.split('/');
+    current_endpoint = path[path.length - 1];
+  });
+</script>
+
 <div class="drawer z-50">
   <input
     id="drawer-toggle-btn"
@@ -9,6 +21,7 @@
     <div class="w-full navbar h-[90px] px-[20px] bg-transparent">
       <div class="navbar-start">
         <a
+          on:click={() => (current_endpoint = '/')}
           href="/"
           class="btn btn-ghost">
           <img
@@ -33,23 +46,41 @@
           </svg>
         </label>
       </div>
-      <div class="hidden md:block navbar-center">
-        <ul class="menu menu-horizontal">
+      <nav class="hidden md:block navbar-center">
+        <ul class="menu menu-horizontal font-semibold text-[1rem]">
           <li>
-            <a href="/txttoimg">Text to Image</a>
+            <a
+              on:click={() => (current_endpoint = 'txttoimg')}
+              href="/txttoimg"
+              class="{current_endpoint === 'txttoimg'
+                ? 'btn-disabled text-neutral'
+                : ''} h-[50px] flex">Text to Image</a>
           </li>
           <li>
-            <a href="/imgtoimg">Image to Image</a>
+            <a
+              on:click={() => (current_endpoint = 'imgtoimg')}
+              href="/imgtoimg"
+              class="{current_endpoint === 'imgtoimg'
+                ? 'btn-disabled text-neutral'
+                : ''} h-[50px] flex">Image to Image</a>
           </li>
           <li>
-            <a href="/inpainting">Inpainting</a>
+            <a
+              on:click={() => (current_endpoint = 'inpainting')}
+              href="/inpainting"
+              class="{current_endpoint === 'inpainting'
+                ? 'btn-disabled text-neutral'
+                : ''} h-[50px] flex">Inpainting</a>
           </li>
         </ul>
-      </div>
+      </nav>
       <div class="hidden md:flex navbar-end">
         <a
+          on:click={() => (current_endpoint = 'signup')}
           href="/account/signup"
-          class="btn btn-secondary normal-case text-[1rem]">Sign Up</a>
+          class="{current_endpoint === 'signup'
+            ? 'btn-disabled text-neutral'
+            : ''} btn btn-secondary normal-case text-[1rem]">Sign Up</a>
       </div>
     </div>
   </div>
@@ -57,7 +88,7 @@
     <label
       for="drawer-toggle-btn"
       class="drawer-overlay" />
-    <div
+    <nav
       class="menu p-4 w-[200px] min-[350px]:w-[250px] min-[400px]:w-[300px] sm:w-80 min-h-full bg-base-200">
       <a
         href="/"
@@ -69,26 +100,38 @@
       <ul class="mb-[30px]">
         <li>
           <a
+            on:click={() => (current_endpoint = 'txttoimg')}
             href="/txttoimg"
-            class="flex h-[50px] min-[400px]:pl-[50px]">Text to Image</a>
+            class="{current_endpoint === 'txttoimg'
+              ? 'btn-disabled text-neutral'
+              : ''} flex h-[50px] min-[400px]:pl-[50px]">Text to Image</a>
         </li>
         <li>
           <a
-            class="flex h-[50px] min-[400px]:pl-[50px]"
+            on:click={() => (current_endpoint = 'imgtoimg')}
+            class="{current_endpoint === 'imgtoimg'
+              ? 'btn-disabled text-neutral'
+              : ''} flex h-[50px] min-[400px]:pl-[50px]"
             href="/imgtoimg">Image to Image</a>
         </li>
         <li>
           <a
-            class="flex h-[50px] min-[400px]:pl-[50px]"
+            on:click={() => (current_endpoint = 'inpainting')}
+            class="{current_endpoint === 'inpainting'
+              ? 'btn-disabled text-neutral'
+              : ''} flex h-[50px] min-[400px]:pl-[50px]"
             href="/inpainting">Inpainting</a>
         </li>
       </ul>
       <div class="w-full flex justify-center">
         <a
+          on:click={() => (current_endpoint = 'signup')}
           href="/account/signup"
-          class="btn btn-secondary w-full max-w-[250px] normal-case text-[1rem]"
+          class="{current_endpoint === 'signup'
+            ? 'btn-disabled'
+            : ''} btn btn-secondary w-full max-w-[250px] normal-case text-[1rem]"
           >Sign Up</a>
       </div>
-    </div>
+    </nav>
   </div>
 </div>

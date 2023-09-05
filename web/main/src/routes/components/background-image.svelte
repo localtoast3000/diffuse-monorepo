@@ -2,7 +2,7 @@
   export const class_ext = '';
 </script>
 
-<div class="absolute top-0 background-container full-width {class_ext}">
+<div class="absolute top-0 background-container full-width z-0 {class_ext}">
   <div class="bolt-pattern">
     <img
       src="/images/bolt/bolt.png"

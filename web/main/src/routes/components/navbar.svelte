@@ -1,7 +1,7 @@
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-label-has-associated-control -->
 
-<script>
+<script lang="ts">
   import { afterNavigate } from '$app/navigation';
   import { getContext } from 'svelte';
 

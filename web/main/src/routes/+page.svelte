@@ -1,11 +1,7 @@
-<script>
-  import BackgroundImage from '$components/page/background-image.svelte';
-</script>
-
-<BackgroundImage />
-<main class="relative w-full z-10 px-page-xs flex justify-center">
+<main
+  class="hero min-h-screen relative w-full px-page-xs flex justify-center items-start">
   <header
-    class="w-full flex flex-col items-center max-w-[500px] md:mt-[100px] md:max-w-[900px]">
+    class="w-full flex flex-col items-center max-w-[500px] md:mt-[200px] md:max-w-[900px]">
     <div class="mb-10 w-full flex flex-col items-center">
       <h1
         class="flex flex-col text-center text-[2rem] sm:text-[3rem] md:text-[4rem] font-header font-bold">

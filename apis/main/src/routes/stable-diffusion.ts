@@ -1,10 +1,10 @@
 import { validationMiddleware } from '@/middleware/exports';
-import userController from '@/controllers/user';
+import stableDiffusionControler from '@/controllers/stable-diffusion';
 import { Router } from 'types/app';
 
-const userRouter: Router = (router, db) => {
+const stableDiffusionRouter: Router = (router, db) => {
   const validate = validationMiddleware(db);
-  const controller = userController(db);
+  const controller = stableDiffusionControler(db);
 
   return {
     base: '/stable-diffusion',
@@ -32,10 +32,10 @@ const userRouter: Router = (router, db) => {
       router.post(
         '/txttoimg',
         validate.fields(promptOptionKeys, true),
-        controller.register
+        controller.generateImagefromPrompt
       );
     },
   };
 };
 
-export default userRouter;
+export default stableDiffusionRouter;

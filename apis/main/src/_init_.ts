@@ -6,7 +6,7 @@ debug('backend:server');
 import cors from 'cors';
 import helmet from 'helmet';
 import logger from 'morgan';
-import { userRouter } from '@/routes/exports';
+import { userRouter, stableDiffusionRouter } from '@/routes/exports';
 import appFactory from './lib/express-util';
 import prismaPostgresConnector from 'prisma/connector';
 
@@ -17,7 +17,7 @@ try {
     port: String(process.env.PORT),
     databaseMapper: datbaseConnection,
     middleware: [logger('dev'), helmet(), cors()],
-    routers: [userRouter],
+    routers: [userRouter, stableDiffusionRouter],
   });
 
   app.init();

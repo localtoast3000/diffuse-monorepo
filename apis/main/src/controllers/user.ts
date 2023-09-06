@@ -1,4 +1,3 @@
-import { hashSync } from 'bcrypt';
 import { ControllerCollection } from 'types/app';
 
 const userController: ControllerCollection = (db) => {

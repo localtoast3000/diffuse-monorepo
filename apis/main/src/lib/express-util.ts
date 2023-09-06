@@ -10,7 +10,7 @@ interface AppConfig {
 }
 
 export default function appFactory({
-  port,
+  port = '8000',
   databaseMapper,
   middleware,
   routers,

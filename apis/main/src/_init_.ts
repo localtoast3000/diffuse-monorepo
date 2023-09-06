@@ -11,7 +11,7 @@ import appFactory from './lib/express-util';
 import prismaPostgresConnector from 'prisma/connector';
 
 try {
-  const datbaseConnection = prismaPostgresConnector('custom-creations');
+  const datbaseConnection = prismaPostgresConnector(process.env.DB_NAME as string);
 
   const app = appFactory({
     port: String(process.env.PORT),

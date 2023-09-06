@@ -4,6 +4,6 @@ import BasicHttpRequests from '../base';
 
 export default (() => {
   return {
-    ...BasicHttpRequests(process.env.AUTH_ORIGIN as string),
+    ...BasicHttpRequests('https://stablediffusionapi.com/api/v3/'),
   };
 })();

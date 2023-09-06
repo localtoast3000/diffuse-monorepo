@@ -11,7 +11,7 @@ const userRouter: Router = (router, db) => {
     routers: () => {
       router.post(
         '/',
-        validate.fields(['firstname', 'lastname', 'email', 'password']),
+        validate.fields(['firstname', 'lastname', 'email', 'password'], false),
         validate.email,
         controller.register
       );

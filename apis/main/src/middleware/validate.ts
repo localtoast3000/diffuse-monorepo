@@ -2,18 +2,19 @@ import { validateBody, validateEmail } from '@/lib/input-validators';
 import { RequestHandler, MiddlewareCollection } from 'types/app';
 
 interface ValidationHandlers {
-  fields(expectedFields: string[]): RequestHandler;
+  fields(expectedFields: string[], allowNull: boolean): RequestHandler;
   email: RequestHandler;
 }
 
 const validationMiddleware: MiddlewareCollection<ValidationHandlers> = () => {
   return {
-    fields(expectedFields) {
+    fields(expectedFields, allowNull) {
       return (req, res, next) => {
         if (
           !validateBody({
             body: req.body,
             expectedPropertys: expectedFields,
+            allowNull,
           })
         ) {
           res.status(406).json({

@@ -14,7 +14,7 @@ try {
   const datbaseConnection = prismaPostgresConnector(process.env.DB_NAME as string);
 
   const app = appFactory({
-    port: String(process.env.PORT),
+    port: Number(process.env.PORT),
     databaseMapper: datbaseConnection,
     middleware: [logger('dev'), helmet(), cors()],
     routers: [userRouter, stableDiffusionRouter],

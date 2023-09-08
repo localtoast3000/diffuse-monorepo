@@ -4,6 +4,6 @@ import BasicHttpRequests from '../base';
 
 export default (() => {
   return {
-    ...BasicHttpRequests('https://stablediffusionapi.com/api/v3/'),
+    ...BasicHttpRequests('https://stablediffusionapi.com/api/v3'),
   };
 })();

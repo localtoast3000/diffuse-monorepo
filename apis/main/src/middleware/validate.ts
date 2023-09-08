@@ -13,7 +13,7 @@ const validationMiddleware: MiddlewareCollection<ValidationHandlers> = () => {
         if (
           !validateBody({
             body: req.body,
-            expectedPropertys: expectedFields,
+            expectedProperties: expectedFields,
             allowNull,
           })
         ) {

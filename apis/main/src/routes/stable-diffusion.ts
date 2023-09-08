@@ -1,10 +1,10 @@
 import { validationMiddleware } from '@/middleware/exports';
-import stableDiffusionControler from '@/controllers/stable-diffusion';
+import stableDiffusionController from '@/controllers/stable-diffusion';
 import { Router } from 'types/app';
 
 const stableDiffusionRouter: Router = (router, db) => {
   const validate = validationMiddleware(db);
-  const controller = stableDiffusionControler(db);
+  const controller = stableDiffusionController(db);
 
   return {
     base: '/stable-diffusion',

@@ -35,18 +35,18 @@ export function isNull(val: string) {
 
 interface ValidateBodyOptions {
   body: { [key: string]: any };
-  expectedPropertys: string[];
+  expectedProperties: string[];
   allowNull?: boolean;
 }
 
 export function validateBody({
   body,
-  expectedPropertys,
+  expectedProperties,
   allowNull = false,
 }: ValidateBodyOptions) {
   if (!body) return false;
-  if (Object.keys(body).length !== expectedPropertys.length) return false;
-  if (!Object.keys(body).every((key) => expectedPropertys.includes(key))) return false;
+  if (Object.keys(body).length !== expectedProperties.length) return false;
+  if (!Object.keys(body).every((key) => expectedProperties.includes(key))) return false;
   if (allowNull) return true;
   else if (
     !Object.values(body).every((val) => {
